@@ -21,7 +21,7 @@ class RecyclerViewModel: ViewModel() {
 
 
 
-    private fun getUser():User {
+     fun getUser():User {
         return User(R.drawable.messi_campeon, "Lionel Messi", "Campeón del mundo - Argentina 2022")
     }
 

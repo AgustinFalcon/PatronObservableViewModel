@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.patronobservable.databinding.ItemRecyclerViewBinding
 
 
-class UserRecyclerView(private val userList: List<User>): RecyclerView.Adapter<UserRecyclerView.UserViewHolder>() {
+class UserRecyclerView(private val userList: MutableList<User>): RecyclerView.Adapter<UserRecyclerView.UserViewHolder>() {
 
 
     inner class UserViewHolder(private val binding: ItemRecyclerViewBinding): RecyclerView.ViewHolder(binding.root) {
@@ -29,6 +29,10 @@ class UserRecyclerView(private val userList: List<User>): RecyclerView.Adapter<U
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val user = userList[position]
         holder.bind(user)
+    }
+
+    fun addItem(user: User) {
+        userList.add(userList.size, user)
     }
 
 
