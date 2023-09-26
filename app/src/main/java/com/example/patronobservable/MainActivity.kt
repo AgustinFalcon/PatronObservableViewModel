@@ -1,5 +1,6 @@
 package com.example.patronobservable
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.widget.addTextChangedListener
@@ -17,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        val intent = Intent(this, RecyclerViewActivity::class.java)
+        startActivity(intent)
 
         val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 

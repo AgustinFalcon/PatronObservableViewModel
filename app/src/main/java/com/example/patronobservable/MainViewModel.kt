@@ -10,6 +10,8 @@ import androidx.lifecycle.ViewModel
 class MainViewModel: ViewModel() {
 
 
+
+
     private val _viewState = MutableLiveData<RegisterStates>()
     val viewState: LiveData<RegisterStates> get() = _viewState
 
